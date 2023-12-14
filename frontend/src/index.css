@@ -115,10 +115,31 @@ input.error {
   border: 1px solid var(--error);
 }
 
-@media (max-width: 600px ) {
+
+/* navbar */
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  margin-left: 10px;
+}
+
+/* auth forms */
+form.signup,
+form.login {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 4px;
+}
+
+@media (max-width: 600px) {
   .home {
-      /* display: grid;
+    /* display: grid;
       grid-template-columns: 3fr 1fr; */
-      gap: 10%;
-    }
+    gap: 10%;
+  }
 }
