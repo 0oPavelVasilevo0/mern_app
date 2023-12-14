@@ -114,3 +114,11 @@ div.error {
 input.error {
   border: 1px solid var(--error);
 }
+
+@media (max-width: 600px ) {
+  .home {
+      /* display: grid;
+      grid-template-columns: 3fr 1fr; */
+      gap: 10%;
+    }
+}
