@@ -5,6 +5,8 @@ const mongoose = require('mongoose')
 const workoutRoutes = require('./routes/workouts')
 const userRoutes = require('./routes/user')
 
+const port = process.env.PORT || 4000
+
 // express app
 const app = express()
 
@@ -24,12 +26,12 @@ app.use('/api/user', userRoutes)
 mongoose.connect(process.env.MONGO_URI)
     .then(() => {
         // listen for requests
-        // app.listen(process.env.PORT, () => {
-        //     console.log('connected to db & listening on port', process.env.PORT)
-        // })
-        app.listen(4000, () => {
+        app.listen(port, () => {
             console.log('connected to db & listening on port', process.env.PORT)
         })
+    //     app.listen(process.env.PORT, () => {
+    //         console.log('connected to db & listening on port', process.env.PORT)
+    //     })
     })
     .catch((error) => {
         console.log(error)
