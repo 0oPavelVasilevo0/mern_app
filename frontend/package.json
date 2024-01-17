@@ -1,7 +1,5 @@
 {
-  "proxy": [
-    "https://server-mern-0c02773e488e.herokuapp.com"
-  ],
+  "proxy": "https://server-mern-0c02773e488e.herokuapp.com",
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
