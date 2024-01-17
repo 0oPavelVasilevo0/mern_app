@@ -1,8 +1,6 @@
 {
   "proxy": [
-    "https://server-mern-0c02773e488e.herokuapp.com",
-    "http://localhost:4000",
-    "https://mern-app-coral.vercel.app"
+    "https://server-mern-0c02773e488e.herokuapp.com"
   ],
   "name": "frontend",
   "version": "0.1.0",
