@@ -13,7 +13,13 @@ const WorkoutDetails = ({ workout }) => {
         if (!user) {
             return
         }
-        const response = await fetch('https://server-mern-0c02773e488e.herokuapp.com/api/workouts/' + workout._id, {
+        // const response = await fetch('/api/workouts/' + workout._id, {
+        //     method: 'DELETE',
+        //     headers: {
+        //         'Authorization': `Bearer ${user.token}`
+        //     }
+        // })
+        const response = await fetch(`https://server-mern-0c02773e488e.herokuapp.com/api/workouts/${workout._id}`, {
             method: 'DELETE',
             headers: {
                 'Authorization': `Bearer ${user.token}`
