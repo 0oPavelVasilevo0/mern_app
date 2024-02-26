@@ -1,6 +1,8 @@
 import React, { useState } from "react"
 import { useWorkoutsContext } from "../hooks/useWorkoutsContext"
 import { useAuthContext } from "../hooks/useAuthContext"
+import { LuPanelLeftOpen } from "react-icons/lu"
+import { LuPanelRightOpen } from "react-icons/lu"
 
 const WorkoutForm = () => {
     const { dispatch } = useWorkoutsContext()
@@ -11,6 +13,16 @@ const WorkoutForm = () => {
     const [reps, setReps] = useState('')
     const [error, setError] = useState(null)
     const [emptyFields, setEmptyFields] = useState([])
+
+    const [isOpen, setOpen] = useState();
+
+    const toggleMenu = () => {
+        setOpen(!isOpen);
+    };
+
+    const closeMenu = () => {
+        setOpen(false)
+    }
 
     const handleSubmit = async (e) => {
         e.preventDefault()
@@ -56,7 +68,8 @@ const WorkoutForm = () => {
     }
 
     return (
-        <form className="create" onSubmit={handleSubmit}>
+        <>
+        <form className={`create ${isOpen ? "active" : ""}`} onSubmit={handleSubmit}>
             <h3>Add a New Workout</h3>
 
             <label>Excersize Title:</label>
@@ -83,9 +96,17 @@ const WorkoutForm = () => {
                 className={emptyFields.includes('reps') ? 'error' : ''}
             />
 
-            <button>Add Workout</button>
+                <button onClick={closeMenu}>Add Workout</button>
             {error && <div className="error">{error}</div>}
         </form>
+        <button className='navbar__menu-button' onClick={toggleMenu}>
+                {isOpen ? (
+                    < LuPanelLeftOpen className='button-icon' />
+                ) : (
+                        <LuPanelRightOpen className='button-icon' />
+                )}
+            </button>
+            </>
     )
 }
 

@@ -26,6 +26,13 @@ header .container {
   justify-content: space-between;
 }
 
+header h1 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: lighter;
+  color: #4d4560;
+}
+
 header a {
   color: #333;
   text-decoration: none;
@@ -100,6 +107,8 @@ form button {
   font-family: "Poppins";
   border-radius: 4px;
   cursor: pointer;
+  display: flex;
+  margin-left: auto;
 }
 
 div.error {
@@ -135,7 +144,22 @@ nav button {
   font-family: "Poppins";
   cursor: pointer;
   font-size: 1em;
-  margin-left: 10px;
+  margin: 4px 0 0 10px;
+}
+
+.userlog {
+  text-align: right;
+}
+
+h3 {
+  text-align: center;
+  font-weight: lighter;
+  color: #4d4560;
+}
+
+.navbar__menu-button,
+.navbar__menu-close {
+  display: none;
 }
 
 /* auth forms */
@@ -154,4 +178,44 @@ form.login {
       grid-template-columns: 3fr 1fr; */
     gap: 10%;
   }
+}
+
+@media (max-width: 760px) {
+  .create {
+    position: fixed;
+    top: 0;
+    right: -280px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 140px;
+    padding: 0 10px;
+    width: 260px;
+    height: 400px;
+    background-color: #dfdddd;
+    /* box-shadow: var(--box-shadow-menu); */
+    transition: transform 0.3s linear;
+  }
+
+  .create.active {
+    transform: translateX(-105%);
+  }
+
+     .navbar__menu-button {
+       display: block;
+       margin-left: auto;
+       width: 24px;
+       height: 24px;
+       background-color: transparent;
+       padding: 0;
+       z-index: 0;
+       border: 0;
+       cursor: pointer;
+     }
+
+            .button-icon {
+              width: 34px;
+              height: 34px;
+              /* fill: var(--primary); */
+              color: var(--primary);
+            }
 }
