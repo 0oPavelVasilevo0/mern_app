@@ -30,7 +30,7 @@ const WorkoutForm = () => {
         //         'Authorization': `Bearer ${user.token}`
         //     }
         // })
-        const response = await fetch('https://mern-app-coral.vercel.app/api/workouts', {
+        const response = await fetch('https://backend-mern-server.vercel.app/api/workouts', {
             method: 'POST',
             body: JSON.stringify(workout),
             headers: {

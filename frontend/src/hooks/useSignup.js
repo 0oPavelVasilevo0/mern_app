@@ -34,7 +34,7 @@ export const useSignup = () => {
     // }
 
         try {
-            const response = await fetch('https://mern-app-coral.vercel.app/api/user/signup', {
+            const response = await fetch('https://backend-mern-server.vercel.app/api/user/signup', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ email, password }),

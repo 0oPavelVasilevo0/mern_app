@@ -14,7 +14,7 @@ const Home = () => {
     useEffect(() => {
         const fetchWorkouts = async () => {
             // const response = await fetch('/api/workouts', {
-            const response = await fetch('https://mern-app-coral.vercel.app/api/workouts', {
+            const response = await fetch('https://backend-mern-server.vercel.app/api/workouts', {
                 headers: {
                     'Authorization': `Bearer ${user.token}`
                 }
