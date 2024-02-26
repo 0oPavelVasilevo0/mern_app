@@ -1,5 +1,5 @@
 {
-  "proxy": "https://server-mern-0c02773e488e.herokuapp.com",
+  "proxy": "https://mern-app-coral.vercel.app",
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
