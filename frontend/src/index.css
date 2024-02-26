@@ -40,7 +40,7 @@ header a {
 
 .pages {
   max-width: 1400px;
-  min-width: 640px;
+  min-height: 640px;
   padding: 20px;
   margin: 0 auto;
 }
