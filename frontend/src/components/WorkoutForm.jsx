@@ -69,6 +69,13 @@ const WorkoutForm = () => {
 
     return (
         <>
+            <button className='navbar__menu-button' onClick={toggleMenu}>
+                {isOpen ? (
+                    < LuPanelLeftOpen className='button-icon' />
+                ) : (
+                    <LuPanelRightOpen className='button-icon' />
+                )}
+            </button>
         <form className={`create ${isOpen ? "active" : ""}`} onSubmit={handleSubmit}>
             <h3>Add a New Workout</h3>
 
@@ -99,13 +106,7 @@ const WorkoutForm = () => {
                 <button onClick={closeMenu}>Add Workout</button>
             {error && <div className="error">{error}</div>}
         </form>
-        <button className='navbar__menu-button' onClick={toggleMenu}>
-                {isOpen ? (
-                    < LuPanelLeftOpen className='button-icon' />
-                ) : (
-                        <LuPanelRightOpen className='button-icon' />
-                )}
-            </button>
+       
             </>
     )
 }
