@@ -179,6 +179,7 @@ form.login {
       /* display: grid;
         grid-template-columns: 3fr 1fr; */
       display: flex;
+      grid-template-columns: none;
       /* gap: 10%; */
     }
   .create {
