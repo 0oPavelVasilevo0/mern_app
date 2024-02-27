@@ -78,7 +78,7 @@ const Navbar = () => {
 
                             <div className="dropdown" ref={dropdownRef}>
                                 <button className="dropbtn" onClick={toggleDropdown} >
-                                    puki@mail.com
+                                    {user.email}
                                     {dropdownVisible ?
                                         <CiSquareChevUp className="down" onClick={handleIconClick} /> :
                                         <CiSquareChevDown className="down" onClick={handleIconClick} />
