@@ -88,6 +88,7 @@ header a {
 
 .no-btn {
   position: absolute;
+
     top: 20px;
     right: 20px;
     cursor: pointer;
@@ -99,14 +100,16 @@ header a {
 
 .yes-btn {
   position: absolute;
+
     top: 20px;
-    right: 52px;
+    right: 49px;
     cursor: pointer;
     background: #f1f1f1;
     padding: 6px;
     border-radius: 4px 0 0 4px;
     border-right: 2px solid #fff;
     color: var(--error);
+    text-align: center;
 }
 
 /* new workout form */

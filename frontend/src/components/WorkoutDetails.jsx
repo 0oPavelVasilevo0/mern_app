@@ -48,11 +48,11 @@ const WorkoutDetails = ({ workout }) => {
             <p><strong>Reps: </strong>{workout.reps}</p>
             <p>{formatDistanceToNow(new Date(workout.createdAt), { addSuffix: true })}</p>
             {/* <span onClick={handleClick}>delete</span> */}
-            <span className="delete-btn" onClick={handleOption}>delete</span>
+            <button className="delete-btn" onClick={handleOption}>delete</button>
             {showOption && (
                 <>
-            <span className="yes-btn" onClick={handleClick}>yes</span>
-            <span className="no-btn" onClick={handleCancel}>no</span>
+            <button className="yes-btn" onClick={handleClick}>yes</button>
+            <button className="no-btn" onClick={handleCancel}>no</button>
             </>
             )}
         </div>
