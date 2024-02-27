@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { useWorkoutsContext } from "../hooks/useWorkoutsContext"
 import { useAuthContext } from "../hooks/useAuthContext"
 import { LuPanelLeftOpen } from "react-icons/lu"
-import { LuPanelRightOpen } from "react-icons/lu"
+import { FiFilePlus } from "react-icons/fi"
 
 const WorkoutForm = () => {
     const { dispatch } = useWorkoutsContext()
@@ -73,7 +73,7 @@ const WorkoutForm = () => {
                 {isOpen ? (
                     < LuPanelLeftOpen className='button-icon' />
                 ) : (
-                    <LuPanelRightOpen className='button-icon' />
+                        <FiFilePlus className='button-icon' />
                 )}
             </button>
         <form className={`create ${isOpen ? "active" : ""}`} onSubmit={handleSubmit}>
