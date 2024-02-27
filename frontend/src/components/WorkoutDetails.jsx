@@ -48,7 +48,7 @@ const WorkoutDetails = ({ workout }) => {
             <p><strong>Reps: </strong>{workout.reps}</p>
             <p>{formatDistanceToNow(new Date(workout.createdAt), { addSuffix: true })}</p>
             {/* <span onClick={handleClick}>delete</span> */}
-            <span onClick={handleOption}>delete</span>
+            <span className="delete-btn" onClick={handleOption}>delete</span>
             {showOption && (
                 <>
             <span className="yes-btn" onClick={handleClick}>yes</span>

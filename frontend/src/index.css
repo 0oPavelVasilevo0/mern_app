@@ -74,7 +74,8 @@ header a {
   color: #555;
 }
 
-.workout-details span {
+/* .workout-details span */
+ .delete-btn {
   position: absolute;
   top: 20px;
   right: 20px;
@@ -86,7 +87,14 @@ header a {
 }
 
 .no-btn {
-  color: var(--header);
+  position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    background: #f1f1f1;
+    padding: 6px;
+    border-radius: 4px;
+  color: var(--primary);
 }
 
 .yes-btn {
