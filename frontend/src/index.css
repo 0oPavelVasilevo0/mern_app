@@ -252,7 +252,7 @@ form.login {
 }
 
 .dropdown-content {
-  display: none;
+  /* display: none; */
   position: absolute;
   border-radius: 4px;
   /* right: 20px; */
@@ -262,7 +262,8 @@ form.login {
   z-index: 1;
 }
 
-.dropdown:hover .dropdown-content {
+/* .dropdown:hover  */
+.dropdown-content {
   display: block;
   
 }
