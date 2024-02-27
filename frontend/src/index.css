@@ -3,8 +3,9 @@
 
 /* layout */
 :root {
-  --primary: #1aac83;
-  --error: #e7195a;
+  --primary: #09a46b;
+  --error: #b70093;
+  --header: #0164dd;
 }
 
 body {
@@ -30,7 +31,7 @@ header h1 {
   margin: 0;
   font-size: 26px;
   font-weight: lighter;
-  color: #4d4560;
+  color: var(--header);
 }
 
 header a {
@@ -138,16 +139,16 @@ nav a {
 
 nav button {
   background: #fff;
-  color: var(--primary);
-  border: 2px solid var(--primary);
-  padding: 6px 0px;
+  color: var(--error);
+  border: 2px solid var(--error);
+  padding: 4px 2px;
   border-radius: 4px;
   font-family: "Poppins";
   cursor: pointer;
   font-size: 1em;
   /* margin: 4px 0 0 10px; */
   display: flex;
-  margin: 0 0 0 20px;
+  /* margin: 0 0 0 20px; */
 }
 
 .userlog {
@@ -157,7 +158,7 @@ nav button {
 h3 {
   text-align: center;
   font-weight: lighter;
-  color: #4d4560;
+  color: var(--header);
 }
 
 .navbar__menu-button,
@@ -243,7 +244,7 @@ form.login {
   font-size: 16px;
   border: none;
   outline: none;
-  color: rgb(36, 34, 34);
+  color: var(--primary);
   /* padding: 14px 16px; */
   background-color: inherit;
   font-family: inherit;
@@ -251,8 +252,10 @@ form.login {
 }
 
 .dropdown-content {
-  display: none;
+  /* display: none; */
   position: absolute;
+  border-radius: 4px;
+  right: 20px;
   background-color: #f9f9f9;
   /* min-width: 160px; */
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -261,6 +264,7 @@ form.login {
 
 .dropdown:hover .dropdown-content {
   display: block;
+  
 }
 
 ul {
@@ -268,10 +272,6 @@ ul {
   margin: 0;
   padding: 0;
   /* align-items: end; */
-}
-li {
-  /* display: flex; */
-  /* justify-content: right; */
 }
 
 .down {
@@ -282,4 +282,5 @@ li {
   vertical-align: bottom;
   height: 20px;
   width: 20px;
+  color:#0d0d0d;
 }
