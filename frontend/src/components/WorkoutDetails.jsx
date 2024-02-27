@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { useWorkoutsContext } from '../hooks/useWorkoutsContext'
 
 // date fns
@@ -8,6 +8,15 @@ import { useAuthContext } from "../hooks/useAuthContext"
 const WorkoutDetails = ({ workout }) => {
     const { dispatch } = useWorkoutsContext()
     const { user } = useAuthContext()
+    const [showOption, setShowOption] = useState(false);
+
+    const handleOption = () => {
+        setShowOption(true)
+    }
+
+    const handleCancel = () => {
+        setShowOption(false);
+    };
 
     const handleClick = async () => {
         if (!user) {
@@ -38,7 +47,14 @@ const WorkoutDetails = ({ workout }) => {
             <p><strong>Load (kg): </strong>{workout.load}</p>
             <p><strong>Reps: </strong>{workout.reps}</p>
             <p>{formatDistanceToNow(new Date(workout.createdAt), { addSuffix: true })}</p>
-            <span className="material-symbols-outlined" onClick={handleClick}>delete</span>
+            {/* <span onClick={handleClick}>delete</span> */}
+            <span onClick={handleOption}>delete</span>
+            {showOption && (
+                <>
+            <span className="yes-btn" onClick={handleClick}>yes</span>
+            <span className="no-btn" onClick={handleCancel}>no</span>
+            </>
+            )}
         </div>
     )
 }

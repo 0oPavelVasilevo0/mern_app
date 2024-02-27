@@ -85,6 +85,21 @@ header a {
   color: var(--error);
 }
 
+.no-btn {
+  color: var(--header);
+}
+
+.yes-btn {
+  position: absolute;
+    top: 20px;
+    right: 42px;
+    cursor: pointer;
+    background: #f1f1f1;
+    padding: 6px;
+    border-radius: 4px;
+    color: var(--error);
+}
+
 /* new workout form */
 label,
 input {
