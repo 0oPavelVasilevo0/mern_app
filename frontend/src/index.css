@@ -16,7 +16,8 @@
 body {
   background: var(--background-2);
   margin: 0;
-  font-family: "Poppins";
+  /* font-family: "Poppins"; */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 header {
