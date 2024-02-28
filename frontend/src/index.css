@@ -276,6 +276,9 @@ form.login {
     fill: transparent;
     color: var(--header);
   }
+    .dropdown-content {
+      right: 0px;
+    }
 
   /* nav button {
                           margin: 0;
@@ -303,21 +306,25 @@ form.login {
 }
 
 .dropdown-content {
-  /* display: none; */
-  position: absolute;
+  display: flex;
+  position: fixed;
   border-radius: 4px;
-  /* right: 20px; */
-  /* background-color: #f9f9f9; */
+  top: 40px;
+  right: 120px;
+  background: var(--background-2);
+  border: 1px solid var(--text-info);
+  padding: 6px;
+  color: var(--text-info);
   /* min-width: 160px; */
-  box-shadow: 0px 8px 16px 0px rgba(255, 255, 255, 0.2);
+  /* box-shadow: 0px 8px 16px 0px rgba(255, 255, 255, 0.2); */
   z-index: 1;
 }
 
 /* .dropdown:hover  */
-.dropdown-content {
+/* .dropdown-content {
   display: block;
 
-}
+} */
 
 ul {
   list-style-type: none;
@@ -340,5 +347,11 @@ ul {
 @media (max-width: 320px) {
   header h1 {
     font-size: 20px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .dropdown-content {
+    right: 20px;
   }
 }

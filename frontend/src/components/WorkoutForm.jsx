@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { useWorkoutsContext } from "../hooks/useWorkoutsContext"
 import { useAuthContext } from "../hooks/useAuthContext"
-import { LuPanelLeftOpen } from "react-icons/lu"
+import { TbFileArrowRight } from "react-icons/tb"
 import { FiFilePlus } from "react-icons/fi"
 
 const WorkoutForm = () => {
@@ -71,7 +71,7 @@ const WorkoutForm = () => {
         <>
             <button className='navbar__menu-button' onClick={toggleMenu}>
                 {isOpen ? (
-                    < LuPanelLeftOpen className='button-icon' />
+                    < TbFileArrowRight className='button-icon' />
                 ) : (
                         <FiFilePlus className='button-icon' />
                 )}
