@@ -80,7 +80,7 @@ header a {
 }
 
 /* .workout-details span */
- .delete-btn {
+.delete-btn {
   position: absolute;
   width: 66px;
   top: 20px;
@@ -97,28 +97,28 @@ header a {
   position: absolute;
   width: 33px;
   border: none;
-    top: 20px;
-    right: 20px;
-    cursor: pointer;
-    background: var(--primary);
-    padding: 6px;
-    border-radius: 0 4px 4px 0;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  background: var(--primary);
+  padding: 6px;
+  border-radius: 0 4px 4px 0;
   color: var(--background-1);
 }
 
 .yes-btn {
   position: absolute;
-width: 33px;
-    top: 20px;
-    right: 53px;
-    cursor: pointer;
-    background: var(--error);
-    padding: 6px;
-    border-radius: 4px 0 0 4px;
-    border: none;
-    /* border-right: 2px solid var(); */
-    color: var(--background-1);
-    text-align: center;
+  width: 33px;
+  top: 20px;
+  right: 53px;
+  cursor: pointer;
+  background: var(--error);
+  padding: 6px;
+  border-radius: 4px 0 0 4px;
+  border: none;
+  /* border-right: 2px solid var(); */
+  color: var(--background-1);
+  text-align: center;
 }
 
 /* new workout form */
@@ -177,10 +177,10 @@ nav a {
 }
 
 nav button {
-  background: var(--text);
+  background: transparent;
   color: var(--error);
   border: 2px solid var(--error);
-  padding: 4px 2px;
+  /* padding: 4px 2px; */
   border-radius: 4px;
   font-family: "Poppins";
   cursor: pointer;
@@ -216,22 +216,28 @@ form.login {
   color: var(--text-info);
 }
 
+.create {
+  background-color: var(--background-1);
+  color: var(--text-info);
+}
 
 
 @media (max-width: 760px) {
   .home {
-      display: flex;
-      flex-direction: column;
-      grid-template-columns: none;
-    }
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: none;
+  }
+
   .create {
     position: fixed;
-    top: 65px;
+    top: 60px;
     right: -280px;
     display: flex;
     flex-direction: column;
     /* margin-top: 140px; */
     /* margin-bottom: 40px; */
+    border-radius: 4px;
     padding: 0 10px;
     width: 260px;
     height: 400px;
@@ -245,29 +251,29 @@ form.login {
     transform: translateX(-111%);
   }
 
-     .navbar__menu-button {
-       display: flex;
-       position: fixed;
-       top: 62px;
-       right: 4px;
-       margin-left: auto;
-       /* width: 34px;
+  .navbar__menu-button {
+    display: flex;
+    position: fixed;
+    top: 62px;
+    right: 4px;
+    margin-left: auto;
+    /* width: 34px;
        height: 34px; */
-       background-color: transparent;
-       padding: 0;
-       z-index: 0;
-       border: 0;
-       cursor: pointer;
-     }
+    background-color: transparent;
+    padding: 0;
+    z-index: 0;
+    border: 0;
+    cursor: pointer;
+  }
 
-            .button-icon {
-              width: 34px;
-              height: 34px;
-              fill: var(--text-info);
-              color: var(--primary);
-            }
+  .button-icon {
+    width: 34px;
+    height: 34px;
+    fill: transparent;
+    color: var(--header);
+  }
 
-                        /* nav button {
+  /* nav button {
                           margin: 0;
                         } */
 }
@@ -306,7 +312,7 @@ form.login {
 /* .dropdown:hover  */
 .dropdown-content {
   display: block;
-  
+
 }
 
 ul {
@@ -325,4 +331,10 @@ ul {
   height: 20px;
   width: 20px;
   color: var(--text-info);
+}
+
+@media (max-width: 320px) {
+  header h1 {
+    font-size: 20px;
+  }
 }
