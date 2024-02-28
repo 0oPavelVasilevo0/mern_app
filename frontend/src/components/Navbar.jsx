@@ -38,6 +38,13 @@ const Navbar = () => {
         toggleDropdown();
     }
 
+    const getUserName = () => {
+        if (user && user.email) {
+            return user.email.split('@')[0]; // установка первой части почты до знака @
+        }
+        return '';
+    }
+
     return (
         <header>
             <div className="container">
@@ -46,39 +53,13 @@ const Navbar = () => {
                 </ Link >
                 <nav>
                     <div className="userlog">
-                        {/* <span>{user.email}</span>
-                            
-                                <button onClick={handleClick}>
-                                Logout
-                            </button> */}
-
                     </div>
                     {user && (
                         <div className="userlog">
-                            {/* <span>{user.email}</span>
-                            
-                                <button onClick={handleClick}>
-                                Logout
-                            </button> */}
-                            
-                            {/* <div className="dropdown">
-                                <button class="dropbtn">{user.email}
-                              
-                                    <CiSquareChevDown className="down" /> 
-                                </button>
-                             
-                                <div class="dropdown-content">
-                                    <ul>
-                                        <li><button onClick={handleClick}>
-                                            Logout
-                                        </button></li>
-                                    </ul>
-                                </div>
-                            </div>  */}
-
                             <div className="dropdown" ref={dropdownRef}>
                                 <button className="dropbtn" onClick={toggleDropdown} >
-                                    {user.email}
+                                    {/* {user.email} */}
+                                    {getUserName()}
                                     {dropdownVisible ?
                                         <CiSquareChevUp className="down" onClick={handleIconClick} /> :
                                         <CiSquareChevDown className="down" onClick={handleIconClick} />
@@ -88,13 +69,15 @@ const Navbar = () => {
                                     <div className="dropdown-content">
                                         <ul>
                                             <li>
+                                                {user.email}
+                                            </li>
+                                            <li>
                                                 <button onClick={handleClick}>Logout</button>
                                             </li>
                                         </ul>
                                     </div>
                                 )}
                             </div>
-                            
                         </div>
                     )}
                     {!user && (

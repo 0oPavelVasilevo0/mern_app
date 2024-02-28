@@ -55,7 +55,7 @@ header a {
 .home {
   display: grid;
   grid-template-columns: 3fr 1fr;
-  gap: 100px;
+  gap: 20px;
 }
 
 .workout-details {
@@ -219,6 +219,10 @@ form.login {
 .create {
   background-color: var(--background-1);
   color: var(--text-info);
+  margin: 20px 0;
+  padding: 20px;
+  min-width: 250px;
+  border-radius: 4px;
 }
 
 
@@ -235,7 +239,7 @@ form.login {
     right: -280px;
     display: flex;
     flex-direction: column;
-    /* margin-top: 140px; */
+    margin: 0px;
     /* margin-bottom: 40px; */
     border-radius: 4px;
     padding: 0 10px;
