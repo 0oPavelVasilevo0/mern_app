@@ -4,18 +4,23 @@
 /* layout */
 :root {
   --primary: #09a46b;
-  --error: #b70093;
-  --header: #0164dd;
+  --error: #d5010c;
+  --header: #02c1d6;
+  --text: #d8d8d8;
+  --text-info: #a3a3a3;
+  --background-1: #0f0f0f;
+  --background-2: #3b3838;
+  --background-error: #ffefef;
 }
 
 body {
-  background: #f1f1f1;
+  background: var(--background-2);
   margin: 0;
   font-family: "Poppins";
 }
 
 header {
-  background: #fff;
+  background: var(--background-1);
 }
 
 header .container {
@@ -35,7 +40,7 @@ header h1 {
 }
 
 header a {
-  color: #333;
+  color: var(--text-info);
   text-decoration: none;
 }
 
@@ -54,7 +59,7 @@ header a {
 }
 
 .workout-details {
-  background: #fff;
+  background: var(--background-1);
   border-radius: 4px;
   margin: 20px auto;
   padding: 20px;
@@ -71,7 +76,7 @@ header a {
 .workout-details p {
   margin: 0;
   font-size: 0.9em;
-  color: #555;
+  color: var(--text-info);
 }
 
 /* .workout-details span */
@@ -80,7 +85,7 @@ header a {
   top: 20px;
   right: 20px;
   cursor: pointer;
-  background: #f1f1f1;
+  background: var(--background-2);
   padding: 6px;
   border-radius: 4px;
   border: none;
@@ -93,24 +98,24 @@ header a {
     top: 20px;
     right: 20px;
     cursor: pointer;
-    background: #f1f1f1;
+    background: var(--primary);
     padding: 6px;
     border-radius: 0 4px 4px 0;
-  color: var(--primary);
+  color: var(--background-1);
 }
 
 .yes-btn {
   position: absolute;
 
     top: 20px;
-    right: 48px;
+    right: 46px;
     cursor: pointer;
-    background: #f1f1f1;
+    background: var(--error);
     padding: 6px;
     border-radius: 4px 0 0 4px;
     border: none;
-    border-right: 2px solid #fff;
-    color: var(--error);
+    /* border-right: 2px solid var(); */
+    color: var(--background-1);
     text-align: center;
 }
 
@@ -125,7 +130,10 @@ input {
   margin-top: 10px;
   margin-bottom: 20px;
   width: 100%;
-  border: 1px solid #ddd;
+  /* border: 1px solid #ddd; */
+  background: var(--background-2);
+  color: var(--text);
+  border: none;
   border-radius: 4px;
   box-sizing: border-box;
 }
@@ -133,7 +141,7 @@ input {
 form button {
   background: var(--primary);
   border: 0;
-  color: #fff;
+  color: var(--text);
   padding: 10px;
   font-family: "Poppins";
   border-radius: 4px;
@@ -144,7 +152,7 @@ form button {
 
 div.error {
   padding: 10px;
-  background: #ffefef;
+  background: var(--background-error);
   border: 1px solid var(--error);
   color: var(--error);
   border-radius: 4px;
@@ -167,7 +175,7 @@ nav a {
 }
 
 nav button {
-  background: #fff;
+  background: var(--text);
   color: var(--error);
   border: 2px solid var(--error);
   padding: 4px 2px;
@@ -201,8 +209,9 @@ form.login {
   max-width: 400px;
   margin: 40px auto;
   padding: 20px;
-  background: #fff;
+  background: var(--background-1);
   border-radius: 4px;
+  color: var(--text-info);
 }
 
 
@@ -215,7 +224,7 @@ form.login {
     }
   .create {
     position: fixed;
-    top: 140px;
+    top: 65px;
     right: -280px;
     display: flex;
     flex-direction: column;
@@ -224,7 +233,7 @@ form.login {
     padding: 0 10px;
     width: 260px;
     height: 400px;
-    background-color: #dfdddd;
+    background-color: var(--background-2);
     /* box-shadow: var(--box-shadow-menu); */
     transition: transform 0.3s linear;
   }
@@ -236,7 +245,7 @@ form.login {
      .navbar__menu-button {
        display: flex;
        position: fixed;
-       top: 139px;
+       top: 62px;
        right: 4px;
        margin-left: auto;
        /* width: 34px;
@@ -251,7 +260,7 @@ form.login {
             .button-icon {
               width: 34px;
               height: 34px;
-              fill: #ffffff;
+              fill: var(--text-info);
               color: var(--primary);
             }
 
@@ -285,9 +294,9 @@ form.login {
   position: absolute;
   border-radius: 4px;
   /* right: 20px; */
-  background-color: #f9f9f9;
+  /* background-color: #f9f9f9; */
   /* min-width: 160px; */
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 8px 16px 0px rgba(255, 255, 255, 0.2);
   z-index: 1;
 }
 
@@ -312,5 +321,5 @@ ul {
   vertical-align: bottom;
   height: 20px;
   width: 20px;
-  color:#0d0d0d;
+  color: var(--text-info);
 }
