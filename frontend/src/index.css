@@ -226,64 +226,7 @@ form.login {
 }
 
 
-@media (max-width: 760px) {
-  .home {
-    display: flex;
-    flex-direction: column;
-    grid-template-columns: none;
-  }
 
-  .create {
-    position: fixed;
-    top: 60px;
-    right: -280px;
-    display: flex;
-    flex-direction: column;
-    margin: 0px;
-    /* margin-bottom: 40px; */
-    border-radius: 4px;
-    padding: 0 10px;
-    width: 260px;
-    height: 400px;
-    background-color: var(--background-1);
-    color: var(--text-info);
-    /* box-shadow: var(--box-shadow-menu); */
-    transition: transform 0.3s linear;
-  }
-
-  .create.active {
-    transform: translateX(-111%);
-  }
-
-  .navbar__menu-button {
-    display: flex;
-    position: fixed;
-    top: 62px;
-    right: 4px;
-    margin-left: auto;
-    /* width: 34px;
-       height: 34px; */
-    background-color: transparent;
-    padding: 0;
-    z-index: 0;
-    border: 0;
-    cursor: pointer;
-  }
-
-  .button-icon {
-    width: 34px;
-    height: 34px;
-    fill: transparent;
-    color: var(--header);
-  }
-    .dropdown-content {
-      right: 0px;
-    }
-
-  /* nav button {
-                          margin: 0;
-                        } */
-}
 
 
 
@@ -330,28 +273,74 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  /* align-items: end; */
 }
 
 .down {
-  /* display: flex;
-  justify-content: flex-end; */
-  /* padding-top: auto; */
-  /* margin-top: 20px; */
   vertical-align: bottom;
   height: 20px;
   width: 20px;
   color: var(--text-info);
 }
 
-@media (max-width: 320px) {
-  header h1 {
-    font-size: 20px;
-  }
-}
-
 @media (max-width: 1440px) {
   .dropdown-content {
     right: 20px;
+  }
+}
+@media (max-width: 760px) {
+  .home {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: none;
+  }
+
+  .create {
+    position: fixed;
+    top: 60px;
+    right: -280px;
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    border-radius: 4px;
+    padding: 0 10px;
+    width: 260px;
+    height: 400px;
+    background-color: var(--background-1);
+    color: var(--text-info);
+    transition: transform 0.3s linear;
+  }
+
+  .create.active {
+    transform: translateX(-111%);
+  }
+
+  .navbar__menu-button {
+    display: flex;
+    position: fixed;
+    top: 62px;
+    right: 4px;
+    margin-left: auto;
+    background-color: transparent;
+    padding: 0;
+    z-index: 0;
+    border: 0;
+    cursor: pointer;
+  }
+
+  .button-icon {
+    width: 34px;
+    height: 34px;
+    fill: transparent;
+    color: var(--header);
+  }
+
+  .dropdown-content {
+    right: 0px;
+  }
+}
+
+@media (max-width: 320px) {
+  header h1 {
+    font-size: 20px;
   }
 }
