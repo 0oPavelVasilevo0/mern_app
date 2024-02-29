@@ -42,7 +42,7 @@ const WorkoutDetails = ({ workout }) => {
     }
 
     return (
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<h1 style={{color: 'red', fontSize: '20px'}}>Loading...</h1>}>
         <div className="workout-details">
             <h4>{workout.title}</h4>
             <p><strong>Load (kg): </strong>{workout.load}</p>
