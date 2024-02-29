@@ -262,6 +262,14 @@ ul {
   color: var(--text-info);
 }
 
+.load {
+  color: #d5010c;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
 @media (max-width: 1440px) {
   .dropdown-content {
     right: 20px;
