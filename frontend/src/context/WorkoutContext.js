@@ -1,4 +1,4 @@
-import { createContext, useReducer } from 'react'
+import { Suspense, createContext, useReducer } from 'react'
 
 export const WorkoutsContext = createContext()
 
@@ -28,7 +28,9 @@ export const WorkoutsContextProvider = ({ children }) => {
 
     return (
         <WorkoutsContext.Provider value={{ ...state, dispatch }}>
-            {children}
+            <Suspense fallback={<h1>loading...</h1>}>
+              {children}
+            </Suspense>
         </WorkoutsContext.Provider>
     )
 }
