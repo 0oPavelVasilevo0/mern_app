@@ -3,9 +3,10 @@ import { useWorkoutsContext } from '../hooks/useWorkoutsContext'
 import { useAuthContext } from '../hooks/useAuthContext'
 
 // components
-import WorkoutDetails from '../components/WorkoutDetails'
+// import WorkoutDetails from '../components/WorkoutDetails'
 import WorkoutForm from '../components/WorkoutForm'
 
+const WorkoutDetails = lazy(() => import('../components/WorkoutDetails'));
 
 const Home = () => {
     const { workouts, dispatch } = useWorkoutsContext()
@@ -34,13 +35,13 @@ const Home = () => {
 
     return (
         <div className="home">
-            <Suspense fallback={<h1 style={{color: 'white', fontSize: '40px'}}>Loading...</h1>}>
             <div className="workouts">    
+            <Suspense fallback={<h1 style={{color: 'white', fontSize: '40px'}}>Loading...</h1>}>
                 {workouts && workouts.map((workout) => (   
                         <WorkoutDetails key={workout._id} workout={workout} />
                 ))}
-            </div>
             </Suspense>
+            </div>
             <WorkoutForm />
         </div>
     )
