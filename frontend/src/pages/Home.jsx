@@ -6,7 +6,13 @@ import { useAuthContext } from '../hooks/useAuthContext'
 // import WorkoutDetails from '../components/WorkoutDetails'
 import WorkoutForm from '../components/WorkoutForm'
 
-const WorkoutDetails = lazy(() => import('../components/WorkoutDetails'));
+const WorkoutDetails = lazy(() => {
+    return new Promise(resolve => {
+        setTimeout(() => {
+            resolve(import('../components/WorkoutDetails'));
+        }, 2000)
+    })
+})
 
 const Home = () => {
     const { workouts, dispatch } = useWorkoutsContext()
