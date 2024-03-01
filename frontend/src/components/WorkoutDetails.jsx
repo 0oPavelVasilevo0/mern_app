@@ -1,4 +1,4 @@
-import React, { Suspense, useState } from "react"
+import React, { useState } from "react"
 import { useWorkoutsContext } from '../hooks/useWorkoutsContext'
 
 // date fns
@@ -42,7 +42,6 @@ const WorkoutDetails = ({ workout }) => {
     }
 
     return (
-        // <Suspense fallback={<h1 style={{color: 'red', fontSize: '20px'}}>Loading...</h1>}>
         <div className="workout-details">
             <h4>{workout.title}</h4>
             <p><strong>Load (kg): </strong>{workout.load}</p>
@@ -57,7 +56,6 @@ const WorkoutDetails = ({ workout }) => {
             </>
             )}
         </div>
-        // </Suspense>
     )
 }
 

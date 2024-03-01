@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
@@ -51,11 +51,7 @@ function App() {
           <Routes>
             <Route
               path="/"
-              element={user ? 
-                <Suspense fallback={<h2>loading...</h2>}>
-                   <Home />
-                </Suspense>
-               : <Navigate to="/login" />}
+              element={user ?  <Home /> : <Navigate to="/login" />}
             />
             <Route
               path='/login'
