@@ -273,6 +273,32 @@ ul {
   align-items: center;
 }
 
+.loader1 {
+  height: 100px;
+  width: 100%;
+  margin: 20px 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img1 {
+  height: 80px;
+  animation: slideRight 4s linear forwards;
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(-100vw);
+  }
+
+  100% {
+    transform: translateX(100vw);
+
+  }
+}
+
 .img {
   height: 80px;
   animation: slideRight 4s linear forwards;

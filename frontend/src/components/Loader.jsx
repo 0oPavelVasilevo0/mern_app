@@ -1,17 +1,11 @@
 import React from 'react'
 import img from '../img/run.gif'
+import img1 from '../img/run.gif'
 
 const Loader = () => {
-  return (
-    // <div className='loader'>
-    //   <div className='spiner'>
-
-    //   </div>
-    //   </div>
-      <div className='loader'>
-        <img src={img} className='img' alt='' />
-
-
+  return (   
+      <div className='loader1'>
+        <img src={img1} className='img1' alt='' />
       </div>
   )
 }
