@@ -273,12 +273,27 @@ ul {
   align-items: center;
 }
 
+.img {
+  height: 80px;
+  animation: slideRight 4s linear forwards;
+}
+@keyframes slideRight {
+  0% {
+    transform: translateX(-100vw);
+  }
+
+  100% {
+    transform: translateX(100vw);
+  
+  }
+}
+
 .spiner {
   width: 80px;
   height: 80px;
   border-radius: 50%;
   border: 3px dashed var(--text);
-  animation: rotate 3s infinite linear;
+  animation: rotate 3.5s infinite linear;
 }
 
 @keyframes rotate {

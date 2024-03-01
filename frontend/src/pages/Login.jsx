@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { useLogin } from "../hooks/useLogin"
+// import Loader from "../components/Loader"
 
 const Login = () => {
     const [email, setEmail] = useState('')
@@ -15,7 +16,7 @@ const Login = () => {
     return (
         <form className="login" onSubmit={handleSubmit}>
             <h3>Log In</h3>
-            
+            {/* <Loader /> */}
             <label>Email address:</label>
             <input
                 type="email"
