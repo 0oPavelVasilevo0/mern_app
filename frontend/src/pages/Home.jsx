@@ -5,12 +5,13 @@ import { useAuthContext } from '../hooks/useAuthContext'
 // components
 // import WorkoutDetails from '../components/WorkoutDetails'
 import WorkoutForm from '../components/WorkoutForm'
+import Loader from '../components/Loader'
 
 const WorkoutDetails = lazy(() => {
     return new Promise(resolve => {
         setTimeout(() => {
             resolve(import('../components/WorkoutDetails'));
-        }, 2000)
+        }, 3000)
     })
 })
 
@@ -43,7 +44,7 @@ const Home = () => {
         <div className="home">
             <div className="workouts">
                     {workouts && workouts.map((workout) => (
-                <Suspense fallback={<h1 style={{ color: 'white', fontSize: '40px' }}>Loading...</h1>}>
+                <Suspense fallback={<Loader />}>
                         <WorkoutDetails key={workout._id} workout={workout} />
                 </Suspense>
                     ))}

@@ -262,12 +262,33 @@ ul {
   color: var(--text-info);
 }
 
-.load {
-  color: #ffffff;
-  font-size: 40px;
+/*Loader*/
+.loader {
+  height: 100px;
+  width: 100%;
+  margin: 20px 0;
+  padding: 0;
   display: flex;
   justify-content: center;
-  text-align: center;
+  align-items: center;
+}
+
+.spiner {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px dashed var(--text);
+  animation: rotate 3s infinite linear;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg) scale(0.2);
+  }
+
+  to {
+    transform: rotate(360deg) scale(1);
+  }
 }
 
 @media (max-width: 1440px) {
@@ -275,6 +296,7 @@ ul {
     right: 20px;
   }
 }
+
 @media (max-width: 760px) {
   .home {
     display: flex;
