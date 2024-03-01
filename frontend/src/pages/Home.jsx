@@ -36,9 +36,9 @@ const Home = () => {
         <div className="home">
             <div className="workouts">    
                 {workouts && workouts.map((workout) => (   
-                    <Suspense fallback={<p className='load'>loading...</p>}>
+                    // <Suspense fallback={<p className='load'>loading...</p>}>
                         <WorkoutDetails key={workout._id} workout={workout} />
-                    </Suspense>
+                    // </Suspense>
                 ))}
             </div>
             <WorkoutForm />
