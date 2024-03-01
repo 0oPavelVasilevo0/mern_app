@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { Suspense, useEffect } from 'react'
 import { useWorkoutsContext } from '../hooks/useWorkoutsContext'
 import { useAuthContext } from '../hooks/useAuthContext'
 
@@ -34,11 +34,13 @@ const Home = () => {
 
     return (
         <div className="home">
+            <Suspense fallback={<h1 style={{color: 'white', fontSize: '40px'}}>Loading...</h1>}>
             <div className="workouts">    
                 {workouts && workouts.map((workout) => (   
                         <WorkoutDetails key={workout._id} workout={workout} />
                 ))}
             </div>
+            </Suspense>
             <WorkoutForm />
         </div>
     )
