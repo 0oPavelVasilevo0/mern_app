@@ -42,11 +42,11 @@ const Home = () => {
     return (
         <div className="home">
             <div className="workouts">
-                <Suspense fallback={<h1 style={{ color: 'white', fontSize: '40px' }}>Loading...</h1>}>
                     {workouts && workouts.map((workout) => (
+                <Suspense fallback={<h1 style={{ color: 'white', fontSize: '40px' }}>Loading...</h1>}>
                         <WorkoutDetails key={workout._id} workout={workout} />
-                    ))}
                 </Suspense>
+                    ))}
             </div>
             <WorkoutForm />
         </div>
