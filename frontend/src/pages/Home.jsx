@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect } from 'react'
+import React, { Suspense, lazy, useEffect } from 'react'
 import { useWorkoutsContext } from '../hooks/useWorkoutsContext'
 import { useAuthContext } from '../hooks/useAuthContext'
 
@@ -35,12 +35,12 @@ const Home = () => {
 
     return (
         <div className="home">
-            <div className="workouts">    
-            <Suspense fallback={<h1 style={{color: 'white', fontSize: '40px'}}>Loading...</h1>}>
-                {workouts && workouts.map((workout) => (   
+            <div className="workouts">
+                <Suspense fallback={<h1 style={{ color: 'white', fontSize: '40px' }}>Loading...</h1>}>
+                    {workouts && workouts.map((workout) => (
                         <WorkoutDetails key={workout._id} workout={workout} />
-                ))}
-            </Suspense>
+                    ))}
+                </Suspense>
             </div>
             <WorkoutForm />
         </div>
