@@ -281,7 +281,7 @@ ul {
 
 @keyframes slideRight {
   0% {
-    transform: translateX(-100vw + 485px);
+    transform: translateX(calc(-100vw + 485px));
   }
 
   100% {
@@ -315,7 +315,7 @@ ul {
 
     @keyframes slideRight {
       0% {
-        transform: translateX(-50vw + 310px);
+        transform: translateX(calc(-50vw + 310px));
       }
   
       100% {
@@ -383,7 +383,7 @@ ul {
       }
   
       100% {
-        transform: translateX(calc(100vw));
+        transform: translateX(100vw);
         /*-120px*/
   
       }
