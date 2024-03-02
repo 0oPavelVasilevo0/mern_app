@@ -315,11 +315,11 @@ ul {
 
     @keyframes slideRight {
       0% {
-        transform: translateX(calc(-100vw + 310px));
+        transform: translateX(calc(-100vw + 300px));
       }
   
       100% {
-        transform: translateX(calc(100vw - 310px));
+        transform: translateX(calc(100vw - 360px));
         /*-120px*/
   
       }
