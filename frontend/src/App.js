@@ -4,8 +4,8 @@ import Navbar from './components/Navbar';
 // import Home from './pages/Home';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
-import { useAuthContext } from './hooks/useAuthContext';
-import { useAuthContext } from '../hooks/useAuthContext'
+// import { useAuthContext } from './hooks/useAuthContext';
+import { useAuthContext } from '../src/hooks/useAuthContext'
 import man from '../src/img/man.gif'
 
 function App() {
