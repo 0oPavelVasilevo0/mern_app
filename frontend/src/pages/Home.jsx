@@ -1,6 +1,5 @@
 import React, { Suspense, lazy, useEffect } from 'react'
 import { useWorkoutsContext } from '../hooks/useWorkoutsContext'
-import { useAuthContext } from '../hooks/useAuthContext'
 
 // components
 // import WorkoutDetails from '../components/WorkoutDetails'
@@ -40,7 +39,7 @@ const Home = () => {
 
     }, [dispatch, user])
 
-    return (
+    return (  
         <div className="home">
             <div className="workouts">
                     {workouts && workouts.map((workout) => (
