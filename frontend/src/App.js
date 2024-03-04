@@ -1,24 +1,16 @@
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 import Navbar from './components/Navbar';
-// import Home from './pages/Home';
+import Home from './pages/Home';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 // import { useAuthContext } from './hooks/useAuthContext';
 import { useAuthContext } from '../src/hooks/useAuthContext'
-import man from '../src/img/man.gif'
 
 function App() {
 
   const { user } = useAuthContext()
 
-  const Home = lazy(() => {
-    return new Promise(resolve => {
-      setTimeout(() => {
-        resolve(import('../src/pages/Home'));
-      }, 3000)
-    })
-  })
 
   // const apiUrl = process.env.REACT_APP_BACKEND_URL;
 
@@ -61,13 +53,7 @@ function App() {
           <Routes>
             <Route
               path="/"
-              element={user ? (
-                <Suspense fallback={<img src={man} alt='' />}>
-                  <Home />
-                </ Suspense >
-              ) : (
-                <Navigate to="/login" />
-              )}
+              element={user ? <Home /> :  <Navigate to="/login" />}
             />
             <Route
               path='/login'
