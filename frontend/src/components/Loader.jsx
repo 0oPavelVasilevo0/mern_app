@@ -6,7 +6,7 @@ import man from '../img/man.gif'
 const Loader = () => {
   return (   
       <div className='loader1'>
-        <img src={man} className='img1' alt='' />
+        <img src={man} className='man' alt='' />
       </div>
   )
 }
