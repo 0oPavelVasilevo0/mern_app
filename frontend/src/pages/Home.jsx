@@ -5,6 +5,7 @@ import { useWorkoutsContext } from '../hooks/useWorkoutsContext'
 // import WorkoutDetails from '../components/WorkoutDetails'
 import WorkoutForm from '../components/WorkoutForm'
 import Loader from '../components/Loader'
+import { useAuthContext } from '../hooks/useAuthContext'
 
 const WorkoutDetails = lazy(() => {
     return new Promise(resolve => {
