@@ -264,7 +264,7 @@ ul {
 
 /*Loader*/
 
-.loader1 {
+/* .loader1 {
   height: 100px;
   width: 100%;
   margin: 20px 0;
@@ -272,11 +272,40 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
+} */
+.loader1 {
+  height: 100%;
+  width: 100%;
+  margin: 20px 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.img1 {
+/* .img1 {
   height: 80px;
   animation: slideRight 4s linear forwards;
+} */
+
+.man {
+  height: 100%;
+  animation: pulse 3s infinite linear;
+}
+
+@keyframes pulse {
+  0% {
+    transform: translateX(0);
+    height: 150px;
+  }
+  50% {
+    transform: translateX(0);
+    height: 250px;
+  }
+  100% {
+    transform: translateX(0);
+    height: 150px;
+  }
 }
 
 @keyframes slideRight {
